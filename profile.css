@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-image: url('bgg.jpg');
+    background-size: cover;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.container{
+    background-color: #708090;
+    width: 500px;
+    border-radius: 10px;
+    margin: 70px;
+}
+.profileDetails{
+    padding-top: 25px;
+}
+.profile-pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+   
+}
+
+#logoutBtn{
+    padding: 10px 30px;
+    color: blue;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    box-shadow: 2px 2px 6px gray;
+    margin: 20px auto;
+   
+}
+#userName{
+    font-size: 30px;
+    color: white;
+    padding-bottom: 20px;
+
+}
+#userEmail{
+    font-size:20px ;
+    color: white;
+    padding-bottom: 20px;
+
+}
+#emailVerificationStatus{
+    color: white;
+    font-size: 20px;
+}
+.setBtn{
+    display: flex;
+    gap: 30px;
+    margin: 30px 30px;
+    flex-wrap: wrap;
+   justify-content: center;
+}
+#editProfileBtn, #verifyemail, #deleteAccountBtn, #updatePasswordBtn{
+    padding: 15px 25px;
+    margin: 20px auto;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+   
+}
+/* ***************************************************************** */
+@media (max-width: 1024px) {
+    .container {
+        width: 70%;
+        margin: 50px;
+    }
+    #userName {
+        font-size: 28px;
+    }
+    #userEmail, #emailVerificationStatus {
+        font-size: 18px;
+    }
+    #logoutBtn, #editProfileBtn, #verifyemail, #deleteAccountBtn, #updatePasswordBtn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+/* Tablets in portrait and landscape (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 40px;
+        padding: 15px;
+    }
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+    #userName {
+        font-size: 24px;
+    }
+    #userEmail, #emailVerificationStatus {
+        font-size: 16px;
+    }
+    #logoutBtn, #editProfileBtn, #verifyemail, #deleteAccountBtn, #updatePasswordBtn {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+}
+
+/* Mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 20px;
+        padding: 10px;
+    }
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+    #userName {
+        font-size: 20px;
+    }
+    #userEmail, #emailVerificationStatus {
+        font-size: 14px;
+    }
+    #logoutBtn, #editProfileBtn, #verifyemail, #deleteAccountBtn, #updatePasswordBtn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .setBtn {
+        gap: 10px;
+        margin: 20px 10px;
+    }
+}

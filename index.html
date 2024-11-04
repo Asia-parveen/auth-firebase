@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up authenticatio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>SIGN UP</h1>
+        </div>
+        <div>
+            <label for="signupEmail" >Email:</label><br>
+            <input type="email" name="email" id="signupEmail" placeholder="email"/>
+    </div><br><br>
+    <div>
+        <label for="signupPassword" >Password:</label><br>
+        <input type="password" name="password" id="signupPassword" placeholder="password"/>
+</div><br><br>
+<button type="button" id="signupBtn">sign up</button>
+<p>Have you already an Account? <span><a href="signin.html"> sign in </a></span></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="firebase.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
