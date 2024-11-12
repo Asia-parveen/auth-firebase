@@ -1,6 +1,7 @@
-import { getAuth, createUserWithEmailAndPassword } from "./firebase.js";
+import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider, signInWithPopup } from "./firebase.js";
 
 const auth = getAuth();
+const provider = new GoogleAuthProvider();
 
 const signupEmail = document.getElementById("signupEmail");
 const signupPassword = document.getElementById("signupPassword");
@@ -52,7 +53,55 @@ signupBtn.addEventListener("click", () => {
         });
     }
 });
-
+googleBtn.addEventListener("click", () => {
+    console.log("Google Login button was clicked");
+  
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log("Google LogIn successful:", result.user);
+  
+        Swal.fire({
+          icon: "success",
+          title: "Sign-In Successful",
+          text: `Welcome user, ${result.user.displayName}! Redirecting to your profile...`,
+          timer: 2000,
+          showConfirmButton: false
+        }).then(() => {
+          window.location.href = "profile.html";
+        });
+      })
+      .catch((error) => {
+        console.error("Error during Google sign-in:", error);
+  
+        let message = " unknown error occurred.";
+        switch (error.code) {
+          case "auth/popup-blocked":
+            message = "Popup was blocked. Please allow popups.";
+            break;
+          case "auth/popup-closed-by-user":
+            message = "closed the popup. Try again.";
+            break;
+          case "auth/invalid-api-key":
+            message = "Invalid API key.";
+            break;
+          case "auth/network-request-failed":
+            message = "Network error.";
+            break;
+          case "auth/account-exists-with-different-credential":
+            message = "An account exists with this email.";
+            break;
+          case "auth/operation-not-allowed":
+            message = "Google Sign-In is not enabled.";
+            break;
+        }
+  
+        Swal.fire({
+          icon: "error",
+          title: "Sign-In Failed",
+          text: message,
+        });
+      });
+  });
 
 
 

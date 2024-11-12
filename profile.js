@@ -115,7 +115,7 @@ verifyEmailBtn.addEventListener("click", () => {
         sendEmailVerification(user).then(() => {
             Swal.fire({
                 title: "Email Verification Sent",
-                text: "Please check your inbox for the verification email. Click the link to complete the registration process.",
+                text: "Please check your inbox for the verification email.",
                 icon: "success",
                 confirmButtonText: "OK"
             });
@@ -149,7 +149,7 @@ deleteAccount.addEventListener("click", () => {
                     user.delete().then(() => {
                         Swal.fire({
                             title: "Account Deleted",
-                            text: "Your account has been deleted successfully!",
+                            text: " account has been deleted successfully!",
                             icon: "success",
                             confirmButtonText: "OK"
                         }).then(() => {

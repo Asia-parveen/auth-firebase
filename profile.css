@@ -31,12 +31,14 @@ body{
 }
 
 #logoutBtn{
+    width: 80%;
     padding: 10px 30px;
-    color: blue;
+    color: black;
     border-radius: 10px;
     outline: none;
     border: none;
     font-size: 18px;
+    font-weight: bold;
     box-shadow: 2px 2px 6px gray;
     margin: 20px auto;
    
@@ -65,13 +67,15 @@ body{
    justify-content: center;
 }
 #editProfileBtn, #verifyemail, #deleteAccountBtn, #updatePasswordBtn{
-    padding: 15px 25px;
+   
+    padding: 8px 35px ;
     margin: 20px auto;
     outline: none;
     border: none;
     border-radius: 10px;
     color: black;
     font-weight: bold;
+    
    
 }
 /* ***************************************************************** */

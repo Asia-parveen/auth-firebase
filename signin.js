@@ -16,8 +16,8 @@ signinBtn.addEventListener("click", () => {
                 // Success message with SweetAlert
                 Swal.fire({
                     icon: 'success',
-                    title: 'Signed In!',
-                    text: 'You have successfully signed in!',
+                    title: 'Logged In!',
+                    text: 'You have successfully Logged in!',
                 }).then(() => {
                     // Redirect to profile page if needed
                      window.location.href = "profile.html";
