@@ -78,6 +78,16 @@ body{
     
    
 }
+#createPost{
+    padding: 8px 35px ;
+    margin: 20px auto;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+
+}
 /* ***************************************************************** */
 @media (max-width: 1024px) {
     .container {

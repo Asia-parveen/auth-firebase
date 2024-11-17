@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
 import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider,signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, sendEmailVerification, signOut  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getDatabase,set, ref, get,  remove, update } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAg9BXWDSJJbcmxdc8bxFUp7u3CeHj5EHI",
@@ -13,6 +14,9 @@ const firebaseConfig = {
   };
 
   const app = initializeApp(firebaseConfig);
+   const db = getDatabase(app);
 //   const analytics = getAnalytics(app);
 
 export { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider,signInWithPopup, signInWithEmailAndPassword,  onAuthStateChanged, updateProfile, sendEmailVerification, signOut  }
+
+export { getDatabase ,set, ref,db, get, remove, update}

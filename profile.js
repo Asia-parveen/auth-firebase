@@ -241,3 +241,7 @@ updatePasswordBtn.addEventListener("click", () => {
         });
     }
 });
+const createPost = document.getElementById("createPost");
+createPost.addEventListener("click", () =>{
+    window.location.href = "crud.html"
+});

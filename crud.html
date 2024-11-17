@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Application</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+   <div>
+    <div class="form">
+       <span id="notification"></span>
+      <h1>Enter Students</h1>
+      <input type="text" id="name" placeholder="Enter name"/>
+      <input type="email" id="email" placeholder="Enter email"/>
+      <input type="number" id="rollnumber" placeholder=" Enter rollNumber"/>
+      <button id="addData">Add Data</button><br>
+      <button class="update_Data" id="update_data">Update Data</button>
+       
+
+    </div>
+
+    <div class="table">
+        <table>
+
+        </table>
+    </div>
+   </div>
+
+    
+
+
+
+   <script type="module" src="firebase.js"></script>
+   <script type="module" src="crud.js"></script>
+</body>
+</html>
