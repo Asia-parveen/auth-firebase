@@ -1,6 +1,12 @@
 
 body{
     font-family: 'Times New Roman', Times, serif;
+    background-image: url('bgg.jpg');
+    background-size: cover;
+   /* text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center; */
  }
  
  
@@ -72,12 +78,16 @@ body{
  table  .del{
     background: rgb(243, 157, 172);
     color: #fff;
+    font-size: 16px;
+    padding: 5px 30px;
     border-radius: 5px;
     box-shadow: 3px 3px 3px black;
  }
  table  .up{
     background: rgb(2, 90, 2);
     color: #fff;
+    font-size: 16px;
+    padding: 5px 30px;
     border-radius: 5px;
     box-shadow: 3px 3px 3px black;
    
